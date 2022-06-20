@@ -1,18 +1,24 @@
+/* Java ile kullanıcıdan boy ve kilo değerlerini alıp bir değişkene atayın. Aşağıdaki formüle göre kullanıcının "Vücut Kitle İndeks" değerini hesaplayıp ekrana yazdırın.
+Formül = Kilo (kg) / Boy(m) * Boy(m) */
+
 import java.util.Scanner;
 
 public class Index {
     public static void main(String[] args) {
-
-        double kilo, boy;
-
         Scanner input = new Scanner(System.in);
+
+        double weight, size;
+
+        // Kullanıcıdan değerleri alıp formüle göre vücut kitle endeksini ekrana yazdırıyoruz.
+
+        System.out.println();
         System.out.print("Lutfen Kilonuzu (Kg Cinsinde) Giriniz : ");
-        kilo = input.nextDouble();
+        weight = input.nextDouble();
         System.out.print("Lutfen Boyunuzu (Metre Cinsinde) Giriniz : ");
-        boy = input.nextDouble();
+        size = input.nextDouble();
+        System.out.println();
 
-        double bdi = (kilo / (boy * boy));
-        System.out.print("Vucut Kitle Indexiniz : " + bdi);
-
+        double bdi = (weight / (size * size));
+        System.out.println("Vucut Kitle Indexiniz : " + bdi);
     }
 }
